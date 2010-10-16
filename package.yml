@@ -1,6 +1,6 @@
 copyright: Unknown
 description: Unknown
-name: clientcide
+name: Clientcide
 sources: [
   Source/Core/Clientcide.js,
   Source/Core/dbug.js,
