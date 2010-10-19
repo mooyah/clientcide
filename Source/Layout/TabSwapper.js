@@ -119,6 +119,7 @@ var TabSwapper = new Class({
 	    }
 	    tab.fade("out");
 	    clicker.fade("out");
+            return this;
 	},
 	showTab: function(index) {
             var tab = this.tabs[index],
@@ -126,6 +127,7 @@ var TabSwapper = new Class({
 
             tab.fade("in");
             clicker.fade("in");
+            return this;
 	},
 	moveTab: function(from, to){
 		var tab = this.tabs[from];
