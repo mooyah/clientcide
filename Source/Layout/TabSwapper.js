@@ -110,6 +110,23 @@ var TabSwapper = new Class({
 		this.now = this.tabs.indexOf(now);
 		return this;
 	},
+	hideTab: function(index) {
+	    var tab = this.tabs[index],
+	       clicker = tab.retrieve('clicker');
+	    if(this.now == index){
+            if (index > 0) this.show(index - 1);
+            else if (index < this.tabs.length) this.show(index + 1);
+	    }
+	    tab.fade("out");
+	    clicker.fade("out");
+	},
+	showTab: function(index) {
+            var tab = this.tabs[index],
+                clicker = tab.retrieve('clicker');
+
+            tab.fade("in");
+            clicker.fade("in");
+	},
 	moveTab: function(from, to){
 		var tab = this.tabs[from];
 		var clicker = tab.retrieve('clicker');
